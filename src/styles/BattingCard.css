@@ -1,0 +1,195 @@
+.batting-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 24px;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.card-title .icon {
+  font-size: 24px;
+}
+
+.batsmen-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.batsman-row {
+  padding: 16px;
+  background: var(--dark-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.batsman-row.striker {
+  background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(26, 115, 232, 0.05));
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(26, 115, 232, 0.2);
+}
+
+.batsman-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.striker-badge {
+  color: #fbbc04;
+  font-size: 20px;
+}
+
+.batsman-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.batsman-stats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.batsman-stats .runs {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.batsman-stats .balls {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.batsman-stats .sr {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 4px 12px;
+  background: var(--card-bg);
+  border-radius: 12px;
+}
+
+.boundaries {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.fours, .sixes {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fours {
+  background: rgba(52, 168, 83, 0.1);
+  color: var(--secondary-color);
+}
+
+.sixes {
+  background: rgba(26, 115, 232, 0.1);
+  color: var(--primary-color);
+}
+
+.all-batsmen {
+  margin-top: 32px;
+}
+
+.all-batsmen h4 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.batsmen-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--dark-bg);
+  align-items: center;
+}
+
+.table-header {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.table-row {
+  font-size: 14px;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+}
+
+.table-row:hover {
+  background: var(--card-bg);
+}
+
+.table-row.out {
+  opacity: 0.6;
+}
+
+.table-row .player-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.out-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  background: rgba(234, 67, 53, 0.1);
+  color: var(--danger-color);
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .batsman-stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .boundaries {
+    margin-left: 0;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 2fr 0.8fr 0.8fr 0.8fr 0.8fr 1fr;
+    font-size: 12px;
+  }
+}

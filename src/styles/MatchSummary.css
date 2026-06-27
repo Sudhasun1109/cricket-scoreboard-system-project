@@ -1,0 +1,157 @@
+.match-summary-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.match-summary {
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 48px;
+  max-width: 900px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  animation: modalAppear 0.5s ease;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.summary-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.summary-header h2 {
+  font-size: 40px;
+  margin-bottom: 24px;
+}
+
+.result-banner {
+  padding: 24px;
+  background: var(--gradient-1);
+  border-radius: 16px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.4);
+}
+
+.innings-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.innings-card {
+  background: var(--dark-bg);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.innings-card h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.score-big {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 16px 0;
+}
+
+.overs {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.top-performers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.performer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--card-bg);
+  border-radius: 8px;
+}
+
+.performer .label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.performer .value {
+  font-size: 15px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.new-match-btn {
+  width: 100%;
+  padding: 18px;
+  background: var(--gradient-2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-match-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 87, 108, 0.4);
+}
+
+@media (max-width: 768px) {
+  .match-summary {
+    padding: 32px 24px;
+  }
+
+  .summary-header h2 {
+    font-size: 28px;
+  }
+
+  .result-banner {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .innings-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .score-big {
+    font-size: 42px;
+  }
+}

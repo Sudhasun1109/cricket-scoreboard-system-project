@@ -1,0 +1,175 @@
+.live-score {
+  background: var(--card-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.match-info-bar {
+  padding: 16px 24px;
+  background: var(--dark-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.match-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.match-title h3 {
+  font-size: 18px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.innings-badge {
+  background: var(--gradient-1);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.score-main {
+  padding: 32px 24px;
+}
+
+.batting-team {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.batting-team h2 {
+  font-size: 24px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.score-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.score-display .runs {
+  font-size: 72px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.score-display .separator {
+  font-size: 48px;
+  color: var(--text-secondary);
+}
+
+.score-display .wickets {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.overs-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.overs-display .label {
+  color: var(--text-secondary);
+}
+
+.overs-display .value {
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.overs-display .total {
+  color: var(--text-secondary);
+}
+
+.score-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 16px;
+  padding: 24px;
+  background: var(--dark-bg);
+  border-radius: 12px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: var(--card-bg);
+}
+
+.stat-item.highlight {
+  background: rgba(26, 115, 232, 0.1);
+  border: 1px solid var(--primary-color);
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 24px;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.target-info {
+  padding: 16px 24px;
+  background: rgba(52, 168, 83, 0.1);
+  border-top: 1px solid rgba(52, 168, 83, 0.3);
+  text-align: center;
+}
+
+.target-info p {
+  color: var(--text-primary);
+  font-size: 15px;
+}
+
+.target-info strong {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .score-display .runs {
+    font-size: 56px;
+  }
+
+  .score-display .separator {
+    font-size: 36px;
+  }
+
+  .score-display .wickets {
+    font-size: 36px;
+  }
+
+  .score-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

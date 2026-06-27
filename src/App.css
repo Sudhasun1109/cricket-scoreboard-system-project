@@ -1,0 +1,21 @@
+.App {
+  min-height: 100vh;
+  background: var(--dark-bg);
+}
+
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Global Transitions */
+* {
+  transition: background-color 0.2s ease;
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(26, 115, 232, 0.3);
+  color: var(--text-primary);
+}

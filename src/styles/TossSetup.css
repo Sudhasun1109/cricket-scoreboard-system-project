@@ -1,0 +1,169 @@
+.toss-setup {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.toss-container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+}
+
+.toss-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.coin-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: flip 2s ease-in-out infinite;
+}
+
+@keyframes flip {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(180deg); }
+}
+
+.toss-header h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.toss-header p {
+  color: var(--text-secondary);
+}
+
+.toss-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.team-selector,
+.decision-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.team-option,
+.decision-option {
+  padding: 20px;
+  background: var(--dark-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.team-option:hover,
+.decision-option:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.team-option.selected,
+.decision-option.selected {
+  background: linear-gradient(135deg, rgba(26, 115, 232, 0.2), rgba(26, 115, 232, 0.1));
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px rgba(26, 115, 232, 0.3);
+}
+
+.team-flag,
+.decision-icon {
+  font-size: 32px;
+}
+
+.proceed-btn {
+  padding: 16px 32px;
+  background: var(--gradient-1);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.proceed-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.proceed-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toss-summary {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(52, 168, 83, 0.1);
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 8px;
+}
+
+.toss-summary p {
+  color: var(--text-primary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.decision-group {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .toss-container {
+    padding: 24px;
+  }
+
+  .team-selector,
+  .decision-selector {
+    grid-template-columns: 1fr;
+  }
+
+  .coin-icon {
+    font-size: 48px;
+  }
+
+  .toss-header h2 {
+    font-size: 24px;
+  }
+}

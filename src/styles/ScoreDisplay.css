@@ -1,0 +1,66 @@
+.score-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.innings-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.main-score h1 {
+  font-size: 4rem;
+  margin: 10px 0;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.score-details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-item .label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.detail-item .value {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.detail-item.target {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-score h1 {
+    font-size: 3rem;
+  }
+  
+  .detail-item .value {
+    font-size: 20px;
+  }
+}
