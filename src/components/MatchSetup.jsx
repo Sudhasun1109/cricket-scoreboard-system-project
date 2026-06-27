@@ -42,7 +42,7 @@ const MatchSetup = () => {
     <div className="match-setup">
       <div className="setup-container">
         <div className="setup-header">
-          <h2>⚙️ Match Setup</h2>
+          <h2> Match Setup</h2>
           <p>Configure your cricket match details</p>
         </div>
 
