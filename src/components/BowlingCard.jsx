@@ -21,7 +21,7 @@ const BowlingCard = () => {
   return (
     <div className="bowling-card">
       <h3 className="card-title">
-        <span className="icon">⚡</span>
+        <span className="icon">⚽</span>
         Bowling
       </h3>
 
